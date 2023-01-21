@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "Yan1XWj/1KvADdfFes/ah2oObn2YokFyVc1HQEcoIJM=",
+  "Source": "APIFinal",
+  "BasePath": "_content/APIFinal",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "APIFinal\\wwwroot",
+      "Source": "APIFinal",
+      "ContentRoot": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\",
+      "BasePath": "_content/APIFinal",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\uploads\\productos\\producto-1.png",
+      "SourceId": "APIFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\",
+      "BasePath": "_content/APIFinal",
+      "RelativePath": "uploads/productos/producto-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\productos\\producto-1.png"
+    },
+    {
+      "Identity": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\uploads\\productos\\producto-2.png",
+      "SourceId": "APIFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\",
+      "BasePath": "_content/APIFinal",
+      "RelativePath": "uploads/productos/producto-2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\productos\\producto-2.png"
+    },
+    {
+      "Identity": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\uploads\\productos\\producto-3.png",
+      "SourceId": "APIFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\",
+      "BasePath": "_content/APIFinal",
+      "RelativePath": "uploads/productos/producto-3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\productos\\producto-3.png"
+    }
+  ]
+}
