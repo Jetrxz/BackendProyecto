@@ -2584,19 +2584,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\USER\\.nuget\\packages\\": {}
+    "C:\\Users\\yanfr\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Poryecto-main\\Contraseña\\Contraseña.csproj",
+      "projectUniqueName": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Contraseña\\Contraseña.csproj",
       "projectName": "Contraseña",
-      "projectPath": "D:\\Poryecto-main\\Contraseña\\Contraseña.csproj",
-      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\Poryecto-main\\Contraseña\\obj\\",
+      "projectPath": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Contraseña\\Contraseña.csproj",
+      "packagesPath": "C:\\Users\\yanfr\\.nuget\\packages\\",
+      "outputPath": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Contraseña\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yanfr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2610,11 +2615,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Poryecto-main\\Models\\Models.csproj": {
-              "projectPath": "D:\\Poryecto-main\\Models\\Models.csproj"
+            "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Models\\Models.csproj": {
+              "projectPath": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Models\\Models.csproj"
             },
-            "D:\\Poryecto-main\\Repository\\Repository.csproj": {
-              "projectPath": "D:\\Poryecto-main\\Repository\\Repository.csproj"
+            "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Repository\\Repository.csproj"
             }
           }
         }
@@ -2662,7 +2667,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

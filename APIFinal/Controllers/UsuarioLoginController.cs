@@ -6,7 +6,7 @@ using Models;
 
 namespace APIFinal.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UsuarioLoginController : ControllerBase
     {
@@ -36,6 +36,13 @@ namespace APIFinal.Controllers
             UsuarioLoginModel response = await usuarioLogin.CrearRegistro(request);
             return Ok(response);
         }
+        [HttpPost]
+        public async Task<IActionResult> login(String usuario, String clave)
+        {
+            UsuarioLoginModel response = await usuarioLogin.ObtenerPorUsuarioYClave(usuario, clave);
+            return Ok(response);
+        }
+
 
         [HttpPut]
         public async Task<IActionResult> put([FromBody] UsuarioLoginModel request)

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Poryecto-main\\Models\\Models.csproj": {}
+    "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Models\\Models.csproj": {}
   },
   "projects": {
-    "D:\\Poryecto-main\\Models\\Models.csproj": {
+    "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Poryecto-main\\Models\\Models.csproj",
+        "projectUniqueName": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "D:\\Poryecto-main\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\Poryecto-main\\Models\\obj\\",
+        "projectPath": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\yanfr\\.nuget\\packages\\",
+        "outputPath": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yanfr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

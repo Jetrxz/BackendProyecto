@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Yan1XWj/1KvADdfFes/ah2oObn2YokFyVc1HQEcoIJM=",
+  "Hash": "xnIyr6T8Y8f+wbbj82iYFVbT2nsEsdRheDo302IQ9Ig=",
   "Source": "APIFinal",
   "BasePath": "_content/APIFinal",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "APIFinal\\wwwroot",
       "Source": "APIFinal",
-      "ContentRoot": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\",
+      "ContentRoot": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\APIFinal\\wwwroot\\",
       "BasePath": "_content/APIFinal",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\uploads\\productos\\producto-1.png",
+      "Identity": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\APIFinal\\wwwroot\\uploads\\productos\\producto-1.png",
       "SourceId": "APIFinal",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\",
+      "ContentRoot": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\APIFinal\\wwwroot\\",
       "BasePath": "_content/APIFinal",
       "RelativePath": "uploads/productos/producto-1.png",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\productos\\producto-1.png"
     },
     {
-      "Identity": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\uploads\\productos\\producto-2.png",
+      "Identity": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\APIFinal\\wwwroot\\uploads\\productos\\producto-2.png",
       "SourceId": "APIFinal",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\",
+      "ContentRoot": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\APIFinal\\wwwroot\\",
       "BasePath": "_content/APIFinal",
       "RelativePath": "uploads/productos/producto-2.png",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\productos\\producto-2.png"
     },
     {
-      "Identity": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\uploads\\productos\\producto-3.png",
+      "Identity": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\APIFinal\\wwwroot\\uploads\\productos\\producto-3.png",
       "SourceId": "APIFinal",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Jetrxz\\Jetrxz Conti\\Proyectos Visual Studio\\APIFinalv2\\APIFinal\\wwwroot\\",
+      "ContentRoot": "D:\\instituto continental\\6to ciclo\\D'licia\\clonado\\BackendProyecto\\APIFinal\\wwwroot\\",
       "BasePath": "_content/APIFinal",
       "RelativePath": "uploads/productos/producto-3.png",
       "AssetKind": "All",

@@ -46,5 +46,11 @@ namespace Logic
             UsuarioLoginModel Resultado = await repo.ObtenerPorId(id);
             return Resultado;
         }
+        public async Task<UsuarioLoginModel> ObtenerPorUsuarioYClave(String usuario, String clave)
+        {
+            String claveEncriptada = Encriptacion.GetSHA256(clave);
+            UsuarioLoginModel Resultado = await repo.ObtenerPorUsuarioYClave(usuario, claveEncriptada);
+            return Resultado;
+        }
     }
 }
