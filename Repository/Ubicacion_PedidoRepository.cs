@@ -39,7 +39,6 @@ namespace Repository
         public async Task<List<Ubicacion_PedidoModel>> ListarTodo()
         {
             List<Ubicacion_PedidoModel> lista = await db.ubicacion_Pedidos
-                                         .Include(z => z.Cliente)
                                          .ToListAsync();
             return lista;
         }

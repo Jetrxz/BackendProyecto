@@ -39,10 +39,9 @@ namespace Repository
         public async Task<List<PedidosModel>> ListarTodo()
         {
             List<PedidosModel> lista = await db.pedidos
-                                         .Include(z => z.Cliente)
+                                       .Include(z => z.Cliente)
                                          .Include(z => z.Estado)
                                          .Include(z => z.Pedido_Productos)
-                                         .Include(z => z.Empleado)
                                          .ToListAsync();
             return lista;
         }

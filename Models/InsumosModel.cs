@@ -20,6 +20,6 @@ namespace Models
         public string Descripcion { get; set; }
         public int UnidadId { get; set; }
         [ForeignKey("UnidadId")]
-        public virtual TipoUnidadModel? TipoUnidad { get; set; }   
+        public virtual TipoUnidadModel? TipoUnidad { get; set; }
     }
 }   

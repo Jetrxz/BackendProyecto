@@ -40,7 +40,6 @@ namespace Repository
         {
             List<ProductosModel> lista = await db.productos
                                          .Include(z => z.Categorias)
-                                         .Include(z => z.Preparacion.PreparacionInsumo.Insumos.TipoUnidad)
                                          .ToListAsync();
             return lista;
         }

@@ -51,7 +51,8 @@ namespace Repository
         }
         public async Task<UsuarioLoginModel> ObtenerPorUsuarioYClave(String usuario, String clave)
         {
-            UsuarioLoginModel resultado = await db.usuarioLogin.FirstAsync(i => i.Usuario == usuario && i.Clave == clave);
+            UsuarioLoginModel resultado = await db.usuarioLogin.FirstAsync(i => i.Usuario == usuario && i.Clave == clave)
+                                                    ;
             return resultado;
         }
     }

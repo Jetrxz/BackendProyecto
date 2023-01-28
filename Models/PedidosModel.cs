@@ -22,12 +22,16 @@ namespace Models
             public int EmpleadoId { get; set; }
             public int EstadoId { get; set; }
             public int ClienteId { get; set; }
+            public int UbicacionId { get; set; }
             [ForeignKey("EmpleadoId")]
             public virtual EmpleadoModel? Empleado { get; set; }
-            public virtual ICollection<Pedido_ProductoModel> Pedido_Productos { get; set; }
+            public virtual ICollection<Pedido_ProductoModel>? Pedido_Productos { get; set; }
             [ForeignKey("EstadoId")]
             public virtual EstadoModel? Estado { get; set; }
             [ForeignKey("ClienteId")]
             public virtual ClienteModel? Cliente { get; set; }
+            [ForeignKey("UbicacionId")]
+            public virtual Ubicacion_PedidoModel? Ubicacion_Pedido { get; set; }
+
         }
 }

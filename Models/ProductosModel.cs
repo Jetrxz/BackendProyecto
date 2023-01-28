@@ -21,10 +21,8 @@ namespace Models
         public decimal Precio { get; set; }
         public string? ImageUrl { get; set; }
         public int CategoriaId { get; set; }
-        public int PreparacionId { get; set; }
         [ForeignKey("CategoriaId")]
         public virtual CategoriaModel? Categorias { get; set; }
-        [ForeignKey("PreparacionId")]
-        public virtual PreparacionModel? Preparacion { get; set; }
+        //public virtual ICollection<Producto_InsumoModel> Producto_Insumos { get; set; } 
     }
 }

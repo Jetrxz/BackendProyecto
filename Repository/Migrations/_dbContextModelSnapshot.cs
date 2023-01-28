@@ -98,7 +98,6 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("Celular")
-                        .HasMaxLength(200)
                         .HasColumnType("int");
 
                     b.Property<string>("Contrasena")
@@ -238,12 +237,23 @@ namespace Repository.Migrations
                     b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
+                    b.Property<int>("PedidoId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ProductoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductosProductoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalProducto")
                         .HasColumnType("int");
 
                     b.HasKey("Pedido_ProductoId");
 
-                    b.HasIndex("ProductoId");
+                    b.HasIndex("PedidoId");
+
+                    b.HasIndex("ProductosProductoId");
 
                     b.ToTable("Pedido_Producto");
                 });
@@ -275,11 +285,11 @@ namespace Repository.Migrations
                     b.Property<DateTime>("FechaPedido")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Pedido_ProductoId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Total")
                         .HasColumnType("decimal(8,2)");
+
+                    b.Property<int>("UbicacionId")
+                        .HasColumnType("int");
 
                     b.HasKey("PedidoId");
 
@@ -289,48 +299,38 @@ namespace Repository.Migrations
 
                     b.HasIndex("EstadoId");
 
-                    b.HasIndex("Pedido_ProductoId");
+                    b.HasIndex("UbicacionId");
 
                     b.ToTable("Pedidos");
                 });
 
-            modelBuilder.Entity("Models.PreparacionInsumoModel", b =>
+            modelBuilder.Entity("Models.Producto_InsumoModel", b =>
                 {
-                    b.Property<int>("PreparacioninsumoId")
+                    b.Property<int>("Producto_InsumoId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PreparacioninsumoId"), 1L, 1);
-
-                    b.Property<int>("Cantidad")
-                        .HasColumnType("int");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Producto_InsumoId"), 1L, 1);
 
                     b.Property<int>("InsumoId")
                         .HasColumnType("int");
 
-                    b.HasKey("PreparacioninsumoId");
-
-                    b.HasIndex("InsumoId");
-
-                    b.ToTable("PreparacionInsumo");
-                });
-
-            modelBuilder.Entity("Models.PreparacionModel", b =>
-                {
-                    b.Property<int>("PreparacionId")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int?>("InumosInsumoId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PreparacionId"), 1L, 1);
-
-                    b.Property<int>("InsumoId")
+                    b.Property<int>("ProductoId")
                         .HasColumnType("int");
 
-                    b.HasKey("PreparacionId");
+                    b.Property<int?>("ProductosProductoId")
+                        .HasColumnType("int");
 
-                    b.HasIndex("InsumoId");
+                    b.HasKey("Producto_InsumoId");
 
-                    b.ToTable("Preparacion");
+                    b.HasIndex("InumosInsumoId");
+
+                    b.HasIndex("ProductosProductoId");
+
+                    b.ToTable("producto_Insumos");
                 });
 
             modelBuilder.Entity("Models.ProductosModel", b =>
@@ -360,14 +360,9 @@ namespace Repository.Migrations
                     b.Property<decimal>("Precio")
                         .HasColumnType("decimal(8,2)");
 
-                    b.Property<int>("PreparacionId")
-                        .HasColumnType("int");
-
                     b.HasKey("ProductoId");
 
                     b.HasIndex("CategoriaId");
-
-                    b.HasIndex("PreparacionId");
 
                     b.ToTable("Productos");
                 });
@@ -418,31 +413,21 @@ namespace Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DireccionId"), 1L, 1);
 
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CodigoPostal")
-                        .HasColumnType("int");
-
                     b.Property<string>("Direccion")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Latitud")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("Latitud")
+                        .HasColumnType("float");
 
-                    b.Property<string>("Longitud")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("Longitud")
+                        .HasColumnType("float");
 
                     b.Property<string>("Referencia")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DireccionId");
-
-                    b.HasIndex("ClienteId");
 
                     b.ToTable("Ubicacion_Pedido");
                 });
@@ -527,11 +512,17 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Models.Pedido_ProductoModel", b =>
                 {
-                    b.HasOne("Models.ProductosModel", "Productos")
-                        .WithMany()
-                        .HasForeignKey("ProductoId")
+                    b.HasOne("Models.PedidosModel", "Pedidos")
+                        .WithMany("Pedido_Productos")
+                        .HasForeignKey("PedidoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Models.ProductosModel", "Productos")
+                        .WithMany()
+                        .HasForeignKey("ProductosProductoId");
+
+                    b.Navigation("Pedidos");
 
                     b.Navigation("Productos");
                 });
@@ -556,9 +547,9 @@ namespace Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Models.Pedido_ProductoModel", "Pedido_Producto")
+                    b.HasOne("Models.Ubicacion_PedidoModel", "Ubicacion_Pedido")
                         .WithMany()
-                        .HasForeignKey("Pedido_ProductoId")
+                        .HasForeignKey("UbicacionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -568,29 +559,22 @@ namespace Repository.Migrations
 
                     b.Navigation("Estado");
 
-                    b.Navigation("Pedido_Producto");
+                    b.Navigation("Ubicacion_Pedido");
                 });
 
-            modelBuilder.Entity("Models.PreparacionInsumoModel", b =>
+            modelBuilder.Entity("Models.Producto_InsumoModel", b =>
                 {
-                    b.HasOne("Models.InsumosModel", "Insumos")
+                    b.HasOne("Models.InsumosModel", "Inumos")
                         .WithMany()
-                        .HasForeignKey("InsumoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("InumosInsumoId");
 
-                    b.Navigation("Insumos");
-                });
-
-            modelBuilder.Entity("Models.PreparacionModel", b =>
-                {
-                    b.HasOne("Models.PreparacionInsumoModel", "PreparacionInsumo")
+                    b.HasOne("Models.ProductosModel", "Productos")
                         .WithMany()
-                        .HasForeignKey("InsumoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductosProductoId");
 
-                    b.Navigation("PreparacionInsumo");
+                    b.Navigation("Inumos");
+
+                    b.Navigation("Productos");
                 });
 
             modelBuilder.Entity("Models.ProductosModel", b =>
@@ -601,26 +585,7 @@ namespace Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Models.PreparacionModel", "Preparacion")
-                        .WithMany()
-                        .HasForeignKey("PreparacionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Categorias");
-
-                    b.Navigation("Preparacion");
-                });
-
-            modelBuilder.Entity("Models.Ubicacion_PedidoModel", b =>
-                {
-                    b.HasOne("Models.ClienteModel", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("ClienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("Models.UsuarioLoginModel", b =>
@@ -632,6 +597,11 @@ namespace Repository.Migrations
                         .IsRequired();
 
                     b.Navigation("Empleado");
+                });
+
+            modelBuilder.Entity("Models.PedidosModel", b =>
+                {
+                    b.Navigation("Pedido_Productos");
                 });
 #pragma warning restore 612, 618
         }

@@ -28,16 +28,20 @@ namespace Repository.Context
                         .HasOne(p => p.Pedidos)
                         .WithMany(pp => pp.Pedido_Productos)
                         .HasForeignKey(p => p.PedidoId);
+            
+            /*modelBuilder.Entity<Producto_InsumoModel>()
+                .HasOne(p => p.Productos)
+                .WithMany(pp => pp.Producto_Insumos)
+                .HasForeignKey(p => p.ProductoId);*/
         }
         #endregion
         public DbSet<TipoUnidadModel> tipoUnidades { get; set; }
         public DbSet<InsumosModel> insumos { get; set; }
         public DbSet<AdquisicionesModel> adquisiciones { get; set; }
-        public DbSet<PreparacionInsumoModel> preparacionInsumos { get; set; }
-        public DbSet<PreparacionModel> preparaciones { get; set; }
         public DbSet<CategoriaModel> categorias { get; set; }
         public DbSet<ProductosModel> productos { get; set; }
         public DbSet<Pedido_ProductoModel> pedido_Productos { get; set; }
+        public DbSet<Producto_InsumoModel> producto_Insumos { get; set; }
         public DbSet<ClienteModel> clientes { get; set; }
         public DbSet<Ubicacion_PedidoModel> ubicacion_Pedidos { get; set; }
         public DbSet<CargoModel> cargos { get; set; }

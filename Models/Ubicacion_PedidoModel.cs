@@ -15,12 +15,8 @@ namespace Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int DireccionId { get; set; }
         public string Direccion { get; set; }
-        public int CodigoPostal { get; set; }
-        public string Latitud { get; set; }
-        public string Longitud { get; set; }
+        public double Latitud { get; set; }
+        public double Longitud { get; set; }
         public string Referencia { get; set; }
-        public int ClienteId { get; set; }
-        [ForeignKey("ClienteId")]
-        public virtual ClienteModel? Cliente { get; set; }
     }
 }
