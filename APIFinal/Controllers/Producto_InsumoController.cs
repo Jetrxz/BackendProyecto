@@ -1,6 +1,7 @@
 ﻿using Logic;
 using Microsoft.AspNetCore.Mvc;
 using Models;
+using Models.Entidades;
 
 namespace APIFinal.Controllers
 {
@@ -27,10 +28,11 @@ namespace APIFinal.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> post(Producto_InsumoModel request)
+        public async Task<IActionResult> post([FromBody] Producto_InsumoModel request)
         {
             Producto_InsumoModel response = await producto_Insumo.CrearRegistro(request);
-            return Ok(response);
+            
+            return Ok();
         }
 
         [HttpPut]

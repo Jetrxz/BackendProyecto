@@ -12,6 +12,7 @@ namespace Models
     public class ProductosModel
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductoId { get; set; }
         [MaxLength(100)]
         public string Nombre { get; set; }
@@ -23,6 +24,8 @@ namespace Models
         public int CategoriaId { get; set; }
         [ForeignKey("CategoriaId")]
         public virtual CategoriaModel? Categorias { get; set; }
+        [ForeignKey("ProductoId")]
+        public virtual ICollection<Producto_InsumoModel>? InsumosPorProducto { get; set; }
         //public virtual ICollection<Producto_InsumoModel> Producto_Insumos { get; set; } 
     }
 }

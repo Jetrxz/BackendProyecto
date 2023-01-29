@@ -14,12 +14,11 @@ namespace Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Producto_InsumoId { get; set; }
-        [ForeignKey("ProductoId")]
         public int ProductoId { get; set; }
-        [ForeignKey("InsumoId")]
         public int InsumoId { get; set; }
-        [JsonIgnore]
-        public virtual ProductosModel? Productos { get; set; }
-        public virtual InsumosModel? Inumos { get; set; }
+        [ForeignKey("InsumoId")]
+        public virtual InsumosModel? Insumo { get; set; }
+
     }
+    
 }

@@ -38,7 +38,7 @@ namespace Repository
         public async Task<List<Producto_InsumoModel>> ListarTodo()
         {
             List<Producto_InsumoModel> lista = await db.producto_Insumos
-                                         .Include(z => z.Inumos)
+                                        .Include(z => z.Insumo)
                                          .ToListAsync();
             return lista;
         }
@@ -49,6 +49,8 @@ namespace Repository
             Producto_InsumoModel insumos = await db.producto_Insumos.FindAsync(id);
             return insumos;
         }
+
+        
 
     }
 }
