@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "zz2oVtg5Dt6Ke/xEpStSNaV+5vtYOjUyQXDf4I3RuMA=",
+  "Source": "APIFinal",
+  "BasePath": "_content/APIFinal",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "APIFinal\\wwwroot",
+      "Source": "APIFinal",
+      "ContentRoot": "D:\\BackendProyecto-yanfid\\APIFinal\\wwwroot\\",
+      "BasePath": "_content/APIFinal",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\BackendProyecto-yanfid\\APIFinal\\wwwroot\\uploads\\productos\\producto-1.png",
+      "SourceId": "APIFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BackendProyecto-yanfid\\APIFinal\\wwwroot\\",
+      "BasePath": "_content/APIFinal",
+      "RelativePath": "uploads/productos/producto-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\productos\\producto-1.png"
+    },
+    {
+      "Identity": "D:\\BackendProyecto-yanfid\\APIFinal\\wwwroot\\uploads\\productos\\producto-2.png",
+      "SourceId": "APIFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BackendProyecto-yanfid\\APIFinal\\wwwroot\\",
+      "BasePath": "_content/APIFinal",
+      "RelativePath": "uploads/productos/producto-2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\productos\\producto-2.png"
+    },
+    {
+      "Identity": "D:\\BackendProyecto-yanfid\\APIFinal\\wwwroot\\uploads\\productos\\producto-3.png",
+      "SourceId": "APIFinal",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\BackendProyecto-yanfid\\APIFinal\\wwwroot\\",
+      "BasePath": "_content/APIFinal",
+      "RelativePath": "uploads/productos/producto-3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\productos\\producto-3.png"
+    }
+  ]
+}
